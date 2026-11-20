@@ -1,3 +1,4 @@
+import Brand from './Brand';
 import { useState, type FormEvent } from 'react';
 import { supabase } from '../lib/supabase';
 import { hebrewError } from '../lib/errors';
@@ -32,10 +33,7 @@ export default function Login() {
   return (
     <main className="center-screen login-bg">
       <form className="panel narrow login" onSubmit={submit} noValidate>
-        <div className="brand big">
-          <span className="brand-mark" aria-hidden="true">ג</span>
-          <span className="brand-text"><strong>גיקלופדיה</strong><span>תכנון תוכן לאינסטגרם</span></span>
-        </div>
+        <Brand big />
         <p className="muted">כניסה למשתמשים מורשים בלבד.</p>
         <label className="field">
           <span>אימייל</span>

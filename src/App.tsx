@@ -1,3 +1,4 @@
+import Brand from './components/Brand';
 import { useEffect, useState } from 'react';
 import type { Session } from '@supabase/supabase-js';
 import { isConfigured, supabase } from './lib/supabase';
@@ -97,10 +98,7 @@ function Shell() {
     <div className="app">
       <a className="skip-link" href="#main">דילוג לתוכן</a>
       <header className="topbar">
-        <div className="brand">
-          <span className="brand-mark" aria-hidden="true">ג</span>
-          <span className="brand-text"><strong>גיקלופדיה</strong><span>תכנון תוכן</span></span>
-        </div>
+        <Brand />
         <nav className="mainnav" aria-label="ניווט ראשי">
           {NAV.map((n) => (
             <a key={n.view} href={`#/${n.view}${n.view === 'calendar' || n.view === 'list' ? '/' + month : ''}`}
