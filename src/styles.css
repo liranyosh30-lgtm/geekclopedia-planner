@@ -105,13 +105,11 @@ input[type='file'] { padding: 6px; }
   position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 16px;
   padding: 10px 20px; background: var(--brand); color: #fff;
 }
-/* Supplied logo retains its original yellow and white background. */
+/* Brand artwork sits directly on its parent background. */
 .brand { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; flex-shrink: 0; }
-.brand-logo { display: block; width: 190px; height: auto; background: #fff; border: 7px solid #fff; border-radius: 6px; }
-.brand-caption { font-size: .85rem; color: var(--accent); }
+.brand-logo { display: block; width: 190px; height: auto; background: transparent; border: 0; border-radius: 0; }
 .brand.big { margin-bottom: 20px; }
 .brand.big .brand-logo { width: 100%; max-width: 340px; border: 0; }
-.brand.big .brand-caption { color: var(--ink-2); font-size: .95rem; margin-top: 8px; }
 .mainnav { display: flex; gap: 2px; flex: 1; overflow-x: auto; scrollbar-width: none; }
 .mainnav a { color: #d9d6e8; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-weight: 500; white-space: nowrap; }
 .mainnav a:hover { background: rgba(255,255,255,.08); color: #fff; }
@@ -290,7 +288,6 @@ input[type='file'] { padding: 6px; }
   body { font-size: 16px; }
   .topbar { flex-wrap: wrap; padding: 8px 16px; gap: 8px; }
   .mainnav { order: 3; flex-basis: 100%; }
-  .topbar .brand-caption { display: none; }
   .topbar .brand-logo { width: 170px; }
   .topbar-actions .new-btn { display: none; }
   .topbar-actions { margin-inline-start: auto; }
